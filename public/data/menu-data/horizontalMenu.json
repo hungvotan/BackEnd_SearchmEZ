@@ -636,7 +636,7 @@
               "newTab": true
             },
             {
-              "url": "auth/login-v2",
+              "url": "auth/login",
               "name": "Login v2",
               "icon": "circle",
               "slug": "auth-login-v2",

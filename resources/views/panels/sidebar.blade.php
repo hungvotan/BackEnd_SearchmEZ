@@ -7,6 +7,7 @@ $configData = Helper::applClasses();
       <li class="nav-item mr-auto">
         <a class="navbar-brand" href="{{url('/')}}">
           <span class="brand-logo">
+{{--            <img src="{{asset('images/logo/logo_searchmez.png')}}" class="mr-1" alt="Toast Image" height="18" width="25" />--}}
             <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24">
               <defs>
                 <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%" y2="89.4879456%">
@@ -31,7 +32,7 @@ $configData = Helper::applClasses();
               </g>
             </svg>
           </span>
-          <h2 class="brand-text">Vuexy</h2>
+          <h2 class="brand-text">SearchmEZ</h2>
         </a>
       </li>
       <li class="nav-item nav-toggle">
@@ -48,9 +49,15 @@ $configData = Helper::applClasses();
       {{-- Foreach menu item starts --}}
       @if(isset($menuData[0]))
       @foreach($menuData[0]->menu as $menu)
+        <?php
+//          echo "<pre>";
+//          var_dump($menu);
+//          echo "</pre>";
+          ?>
       @if(isset($menu->navheader))
       <li class="navigation-header">
-        <span>{{ __('locale.'.$menu->navheader) }}</span>
+{{--        <span>{{ __('locale.'.$menu->navheader) }}</span>--}}
+        <span>{{ $menu->navheader }}</span>
         <i data-feather="more-horizontal"></i>
       </li>
       @else
@@ -64,7 +71,8 @@ $configData = Helper::applClasses();
       <li class="nav-item {{ Route::currentRouteName() === $menu->slug ? 'active' : '' }} {{ $custom_classes }}">
         <a href="{{isset($menu->url)? url($menu->url):'javascript:void(0)'}}" class="d-flex align-items-center" target="{{isset($menu->newTab) ? '_blank':'_self'}}">
           <i data-feather="{{ $menu->icon }}"></i>
-          <span class="menu-title text-truncate">{{ __('locale.'.$menu->name) }}</span>
+{{--          <span class="menu-title text-truncate">{{ __('locale.'.$menu->name) }}</span>--}}
+          <span class="menu-title text-truncate">{{ $menu->name }}</span>
           @if (isset($menu->badge))
           <?php $badgeClasses = "badge badge-pill badge-light-primary ml-auto mr-1" ?>
           <span class="{{ isset($menu->badgeClass) ? $menu->badgeClass : $badgeClasses }} ">{{$menu->badge}}</span>

@@ -212,7 +212,7 @@
         <div class="media-body">
           <div class="mail-details">
             <div class="mail-items">
-              <h5 class="mb-25">Envato Market</h5>
+              <h5 class="mb-25">SearchmeZ</h5>
               <span class="text-truncate">👋 You have new comment...</span>
             </div>
             <div class="mail-meta-item">

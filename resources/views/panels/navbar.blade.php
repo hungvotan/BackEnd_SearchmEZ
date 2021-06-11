@@ -28,7 +28,7 @@
             </g>
           </g>
         </svg></span>
-        <h2 class="brand-text mb-0">Vuexy</h2>
+        <h2 class="brand-text mb-0">SearchmEZ</h2>
         </a>
       </li>
     </ul>
@@ -63,31 +63,31 @@
           </ul>
         </div>
         <ul class="nav navbar-nav align-items-center ml-auto">
-          <li class="nav-item dropdown dropdown-language">
-            <a class="nav-link dropdown-toggle" id="dropdown-flag" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="flag-icon flag-icon-us"></i>
-              <span class="selected-language">English</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-flag">
-              <a class="dropdown-item" href="{{url('lang/en')}}" data-language="en">
-                <i class="flag-icon flag-icon-us"></i> English
-              </a>
-              <a class="dropdown-item" href="{{url('lang/fr')}}" data-language="fr">
-                <i class="flag-icon flag-icon-fr"></i> French
-              </a>
-              <a class="dropdown-item" href="{{url('lang/de')}}" data-language="de">
-                <i class="flag-icon flag-icon-de"></i> German
-              </a>
-              <a class="dropdown-item" href="{{url('lang/pt')}}" data-language="pt">
-                <i class="flag-icon flag-icon-pt"></i> Portuguese
-              </a>
-            </div>
-          </li>
+{{--          <li class="nav-item dropdown dropdown-language">--}}
+{{--            <a class="nav-link dropdown-toggle" id="dropdown-flag" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--              <i class="flag-icon flag-icon-us"></i>--}}
+{{--              <span class="selected-language">English</span>--}}
+{{--            </a>--}}
+{{--            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-flag">--}}
+{{--              <a class="dropdown-item" href="{{url('lang/en')}}" data-language="en">--}}
+{{--                <i class="flag-icon flag-icon-us"></i> English--}}
+{{--              </a>--}}
+{{--              <a class="dropdown-item" href="{{url('lang/fr')}}" data-language="fr">--}}
+{{--                <i class="flag-icon flag-icon-fr"></i> French--}}
+{{--              </a>--}}
+{{--              <a class="dropdown-item" href="{{url('lang/de')}}" data-language="de">--}}
+{{--                <i class="flag-icon flag-icon-de"></i> German--}}
+{{--              </a>--}}
+{{--              <a class="dropdown-item" href="{{url('lang/pt')}}" data-language="pt">--}}
+{{--                <i class="flag-icon flag-icon-pt"></i> Portuguese--}}
+{{--              </a>--}}
+{{--            </div>--}}
+{{--          </li>--}}
           <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon" data-feather="{{($configData['theme'] === 'dark') ? 'sun' : 'moon' }}"></i></a></li>
           <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon" data-feather="search"></i></a>
             <div class="search-input">
               <div class="search-input-icon"><i data-feather="search"></i></div>
-              <input class="form-control input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="search">
+              <input class="form-control input" type="text" placeholder="Explore SearchmEZ..." tabindex="-1" data-search="search">
               <div class="search-input-close"><i data-feather="x"></i></div>
               <ul class="search-list search-list-main"></ul>
             </div>

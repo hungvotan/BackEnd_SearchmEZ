@@ -166,9 +166,9 @@
               "newTab": true
             },
             {
-              "url": "auth/login-v2",
+              "url": "auth/login",
               "name": "Login v2",
-              "slug": "auth-login-v2",
+              "slug": "auth-login",
               "newTab": true
             },
             {

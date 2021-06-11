@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ListingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\DashboardController;
@@ -32,6 +33,26 @@ use App\Http\Controllers\ChartsController;
 //Route::get('/', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce');
 
 Auth::routes(['verify' => true]);
+
+/* Searchmez Route Listing */
+Route::group(['prefix' => 'listing'], function () {
+    Route::get('animals', [ListingController::class,'animals'])->name('listing-animals');
+    Route::get('auction', [ListingController::class,'auction'])->name('listing-auction');
+    Route::get('automobiles', [ListingController::class,'automobiles'])->name('listing-automobiles');
+    Route::get('blogs', [ListingController::class,'blogs'])->name('listing-blogs');
+    Route::get('booking', [ListingController::class,'booking'])->name('listing-booking');
+    Route::get('coupon', [ListingController::class,'coupon'])->name('listing-coupon');
+    Route::get('edibles', [ListingController::class,'edibles'])->name('listing-edibles');
+    Route::get('events', [ListingController::class,'events'])->name('listing-events');
+    Route::get('generallisting', [ListingController::class,'generallisting'])->name('listing-generallisting');
+    Route::get('jobs', [ListingController::class,'jobs'])->name('listing-jobs');
+    Route::get('places', [ListingController::class,'places'])->name('listing-places');
+    Route::get('products', [ListingController::class,'products'])->name('listing-products');
+    Route::get('realestate', [ListingController::class,'realestate'])->name('listing-realestate');
+    Route::get('services', [ListingController::class,'services'])->name('listing-services');
+    Route::get('webdirectory', [ListingController::class,'webdirectory'])->name('listing-webdirectory');
+});
+
 
 /* Route Dashboards */
 Route::group(['prefix' => 'dashboard'], function () {

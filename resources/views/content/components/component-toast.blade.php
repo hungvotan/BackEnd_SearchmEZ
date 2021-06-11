@@ -39,7 +39,7 @@
           >
             <div class="toast-header">
               <img
-                src="{{asset('images/logo/logo.png')}}"
+                src="{{asset('images/logo/logo_searchmez.png')}}"
                 class="mr-1"
                 alt="Toast image"
                 height="18"
@@ -109,7 +109,7 @@
   <div style="position: fixed; top: 1rem; z-index: 1030">
     <div class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
       <div class="toast-header">
-        <img src="{{asset('images/logo/logo.png')}}" class="mr-1" alt="Toast Image" height="18" width="25" />
+        <img src="{{asset('images/logo/logo_searchmez.png')}}" class="mr-1" alt="Toast Image" height="18" width="25" />
         <strong class="mr-auto">Vue Admin</strong>
         <small class="text-muted">1 mins ago</small>
         <button type="button" class="ml-50 close" data-dismiss="toast" aria-label="Close">
@@ -132,7 +132,7 @@
   style="top: 1rem; right: 1rem"
 >
   <div class="toast-header">
-    <img src="{{asset('images/logo/logo.png')}}" class="mr-1" alt="Toast image" height="18" width="25" />
+    <img src="{{asset('images/logo/logo_searchmez.png')}}" class="mr-1" alt="Toast image" height="18" width="25" />
     <strong class="mr-auto">Vue Admin</strong>
     <small class="text-muted">11 mins ago</small>
     <button type="button" class="ml-1 close" data-dismiss="toast" aria-label="Close">
@@ -149,7 +149,7 @@
     <!-- Auto hide off -->
     <div class="toast toast-autohide hide" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
       <div class="toast-header">
-        <img src="{{asset('images/logo/logo.png')}}" class="mr-1" alt="Toast Image" height="18" width="25" />
+        <img src="{{asset('images/logo/logo_searchmez.png')}}" class="mr-1" alt="Toast Image" height="18" width="25" />
         <strong class="mr-auto">Vue Admin</strong>
         <small class="text-muted">just now</small>
         <button type="button" class="ml-1 close" data-dismiss="toast" aria-label="Close">
@@ -163,7 +163,7 @@
     <!-- Stacked Toast -->
     <div class="toast toast-stacked hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
       <div class="toast-header">
-        <img src="{{asset('images/logo/logo.png')}}" class="mr-1" alt="Toast Image" height="18" width="25" />
+        <img src="{{asset('images/logo/logo_searchmez.png')}}" class="mr-1" alt="Toast Image" height="18" width="25" />
         <strong class="mr-auto">Vue Admin</strong>
         <small class="text-muted">2 seconds ago</small>
         <button type="button" class="ml-1 close" data-dismiss="toast" aria-label="Close">

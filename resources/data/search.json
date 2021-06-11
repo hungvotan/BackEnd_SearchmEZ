@@ -20,7 +20,7 @@
     { "name": "Users View", "url": "app/user/view", "icon": "user" },
     { "name": "Users Edit", "url": "app/user/edit", "icon": "user" },
     { "name": "Login v1 Page", "url": "auth/login-v1", "icon": "log-in" },
-    { "name": "Login v2 Page v2", "url": "auth/login-v2", "icon": "log-in" },
+    { "name": "Login v2 Page v2", "url": "auth/login", "icon": "log-in" },
     { "name": "Register v1 Page", "url": "auth/register-v1", "icon": "user-plus" },
     { "name": "Register v2 Page", "url": "auth/register-v2", "icon": "user-plus" },
     { "name": "Forgot Password v1 Page", "url": "auth/forgot-password-v1", "icon": "crosshair" },
