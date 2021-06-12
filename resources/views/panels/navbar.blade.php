@@ -284,8 +284,8 @@
             <a class="dropdown-item" href="{{url('page/account-settings')}}">
               <i class="mr-50" data-feather="settings"></i> Settings
             </a>
-            <a class="dropdown-item" href="{{url('page/pricing')}}">
-              <i class="mr-50" data-feather="credit-card"></i> Pricing
+{{--            <a class="dropdown-item" href="{{url('page/pricing')}}">--}}
+{{--              <i class="mr-50" data-feather="credit-card"></i> Pricing--}}
             </a>
             <a class="dropdown-item" href="{{url('page/faq')}}">
               <i class="mr-50" data-feather="help-circle"></i> FAQ

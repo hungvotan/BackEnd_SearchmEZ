@@ -48,3 +48,6 @@ html .content.app-content {
 .main-menu.menu-light .navigation li a {color: #FFF;}
 .main-menu .shadow-bottom {display: none !important;}
 .customizer {display: none !important;}
+.btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    background-color: #ff7900 !important;
+}
