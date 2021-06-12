@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminFeedController;
 use App\Http\Controllers\ListingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LanguageController;
@@ -29,7 +30,8 @@ use App\Http\Controllers\ChartsController;
 */
 
 // Main Page Route
- Route::get('/', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce')->middleware('verified');
+// Route::get('/', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce')->middleware('verified');
+ Route::get('/', [AdminFeedController::class,'adminfeed'])->name('adminfeed')->middleware('verified');
 //Route::get('/', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce');
 
 Auth::routes(['verify' => true]);

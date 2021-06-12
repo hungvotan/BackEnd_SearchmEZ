@@ -7,7 +7,7 @@
       "slug": "dashboard-ecommerce"
     },
     {
-      "url": "page-layouts/empty",
+      "url": "#",
       "name": "General Settings",
       "icon": "home",
       "slug": "layout-empty"
@@ -19,31 +19,31 @@
       "slug": "",
       "submenu": [
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Overview",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Orders",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Applications",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Listing Engagements",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Insight and Analytics",
           "icon": "home",
           "slug": "layout-empty"
@@ -160,79 +160,79 @@
           "slug": "app-chat"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Notifications History",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Flags",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Reports",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "withdrawal Request",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Contact Us",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Disputes",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Website Services",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Buy Points",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "ID Verifications",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "SearchmEZ Verifications",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Location Verifications",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Legal Verifications",
           "icon": "home",
           "slug": "layout-empty"
         },
         {
-          "url": "page-layouts/empty",
+          "url": "#",
           "name": "Website Verifications",
           "icon": "home",
           "slug": "layout-empty"

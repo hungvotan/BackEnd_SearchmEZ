@@ -2,14 +2,14 @@
 {{ $configData['blankPageClass'] }} {{ $configData['bodyClass'] }}
 {{ $configData['verticalMenuNavbarType'] }}
 {{ $configData['sidebarClass'] }} {{ $configData['footerType'] }}" data-menu="vertical-menu-modern" data-col="{{ $configData['showMenu'] === true ? '2-columns' : '1-column' }}" data-layout="{{ ($configData['theme'] === 'light') ? '' : $configData['layoutTheme'] }}" style="{{ $configData['bodyStyle'] }}" data-framework="laravel" data-asset-path="{{ asset('/')}}">
-
+{{-- Include Navbar --}}
+@include('panels.navbar')
   {{-- Include Sidebar --}}
   @if((isset($configData['showMenu']) && $configData['showMenu'] === true))
   @include('panels.sidebar')
   @endif
 
-  {{-- Include Navbar --}}
-  @include('panels.navbar')
+
 
   <!-- BEGIN: Content-->
   <div class="app-content content {{ $configData['pageClass'] }}">
