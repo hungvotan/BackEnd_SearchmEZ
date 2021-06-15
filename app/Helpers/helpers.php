@@ -3,6 +3,7 @@
 namespace App\Helpers;
 
 use Config;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class Helper
@@ -159,5 +160,15 @@ class Helper
                 }
             }
         }
+    }
+
+    public static function listing_get_feature_image($product_id)
+    {
+        $feature_image = DB::table('product_image')
+            ->select('*')
+            ->where('product_id',$product_id)
+            ->where('type','feature_image')
+            ->first();
+        return $feature_image;
     }
 }

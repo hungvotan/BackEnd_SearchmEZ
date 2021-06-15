@@ -10,158 +10,357 @@
     <link rel="stylesheet" href="{{ asset(mix('vendors/css/pickers/flatpickr/flatpickr.min.css')) }}">
 @endsection
 
-@section('page-style')
-    {{-- Page Css files --}}
-    <link rel="stylesheet" type="text/css" href="{{asset('css/base/plugins/forms/pickers/form-flat-pickr.css')}}">
-@endsection
-
-
 @section('content')
     <!-- listing Booking  -->
     <section id="listing-Booking">
+        @if (session('status'))
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-primary">
+                        <div class="alert-heading">
+                            {{ session('status') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        <div class="alert-heading">
+                            {{ session('error') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-header border-bottom">
+                    <div class="card-header">
                         <h4 class="card-title">Booking | Listing</h4>
-                        <button class="dt-button btn btn-primary btn-add-record ml-2" tabindex="0" aria-controls="DataTables_Table_0" type="button"><span>Add Booking</span></button>
-{{--                        <div class="dt-action-buttons text-xl-right text-lg-left text-lg-right text-left "><div class="dt-buttons"><button class="dt-button btn btn-primary btn-add-record ml-2" tabindex="0" aria-controls="DataTables_Table_0" type="button"><span>Add Booking</span></button> </div></div>--}}
-                    </div>
-                    <!--Search Form -->
-                    <div class="card-body mt-2">
-                        <form class="dt_adv_search" method="POST">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-row mb-1">
-                                        <div class="col-lg-4">
-                                            <label>Name:</label>
-                                            <input
-                                                    type="text"
-                                                    class="form-control dt-input dt-full-name"
-                                                    data-column="1"
-                                                    placeholder="Alaric Beslier"
-                                                    data-column-index="0"
-                                            />
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <label>Email:</label>
-                                            <input
-                                                    type="text"
-                                                    class="form-control dt-input"
-                                                    data-column="2"
-                                                    placeholder="demo@example.com"
-                                                    data-column-index="1"
-                                            />
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <label>Post:</label>
-                                            <input
-                                                    type="text"
-                                                    class="form-control dt-input"
-                                                    data-column="3"
-                                                    placeholder="Web designer"
-                                                    data-column-index="2"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-lg-4">
-                                            <label>City:</label>
-                                            <input
-                                                    type="text"
-                                                    class="form-control dt-input"
-                                                    data-column="4"
-                                                    placeholder="Balky"
-                                                    data-column-index="3"
-                                            />
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <label>Date:</label>
-                                            <div class="form-group mb-0">
-                                                <input
-                                                        type="text"
-                                                        class="form-control dt-date flatpickr-range dt-input"
-                                                        data-column="5"
-                                                        placeholder="StartDate to EndDate"
-                                                        data-column-index="4"
-                                                        name="dt_date"
-                                                />
-                                                <input
-                                                        type="hidden"
-                                                        class="form-control dt-date start_date dt-input"
-                                                        data-column="5"
-                                                        data-column-index="4"
-                                                        name="value_from_start_date"
-                                                />
-                                                <input
-                                                        type="hidden"
-                                                        class="form-control dt-date end_date dt-input"
-                                                        name="value_from_end_date"
-                                                        data-column="5"
-                                                        data-column-index="4"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <label>Price:</label>
-                                            <input
-                                                    type="text"
-                                                    class="form-control dt-input"
-                                                    data-column="6"
-                                                    placeholder="10000"
-                                                    data-column-index="5"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <hr class="my-0" />
-                    <div class="card-datatable">
-                        <table class="dt-advanced-search table">
-                            <thead>
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Post</th>
-                                <th>City</th>
-                                <th>Date</th>
-                                <th>Price</th>
-                            </tr>
-                            </thead>
-                            <tfoot>
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Post</th>
-                                <th>City</th>
-                                <th>Date</th>
-                                <th>Price</th>
-                            </tr>
-                            </tfoot>
-                        </table>
+                        <button class="dt-button btn btn-primary btn-add-record ml-2" data-toggle="modal" data-target="#addnew" type="button"><span>Add New</span></button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--/ Advanced Search -->
-@endsection
+    <section id="card-images">
+        <div class="row">
+            <?php
+            if(isset($get_listing) && count($get_listing) == 0) { ?>
+            <div class="col-md-12">
+                <div class="alert alert-danger">
+                    <div class="alert-heading">
+                        Data not found!
+                    </div>
+                </div>
+            </div>
+            <?php } else { ?>
+            <?php foreach ($get_listing AS $value) { ?>
+            @include('listing.template_product');
+            <?php } ?>
+            <?php } ?>
+        </div>
+    </section>
+    <div class="modal fade text-left" id="addnew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h4 class="modal-title" id="myModalLabel17">Add New</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="needs-validation" method="POST" action="{{ route('listing-addnew') }}" enctype="multipart/form-data">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h2 class="text-warning">List</h2>
+                                <p>Sell, Rent Out, Hire out or List a listing</p>
+                            </div>
 
+                        </div>
+                        <div class="divider">
+                            <div class="divider-text"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                What do you want to do?
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                    <label class="btn btn-outline-primary waves-effect active">
+                                                        <input class="form-check-input" type="radio" name="list" id="list1" value="Sell" checked=""> Sell
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect">
+                                                        <input class="form-check-input" type="radio" name="list" id="list2" value="Rent Out"> Rent Out
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect">
+                                                        <input class="form-check-input" type="radio" name="list" id="list3" value="List"> List
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect">
+                                                        <input class="form-check-input" type="radio" name="list" id="list4" value="Hire or Book Out"> Hire or Book Out
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-4">
+                                                Price per...?
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                    <label class="btn btn-outline-primary waves-effect active">
+                                                        <input class="form-check-input" type="radio" name="type" id="type1" value="One-Off" checked=""> One-Off
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect">
+                                                        <input class="form-check-input" type="radio" name="type" id="type2" value="24 hours"> 24 hours
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect">
+                                                        <input class="form-check-input" type="radio" name="type" id="type3" value="Week"> Week
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect">
+                                                        <input class="form-check-input" type="radio" name="type" id="type4" value="Month"> Month
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-4">
+                                                Template?
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                    <label class="btn btn-outline-primary waves-effect active">
+                                                        <input class="form-check-input" type="radio" name="template" id="template1" value="template1" checked=""> <img src="{{asset('images/searchmez/template1.png')}}" class="template_width"/>
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect active">
+                                                        <input class="form-check-input" type="radio" name="template" id="template2" value="template2"> <img src="{{asset('images/searchmez/template2.png')}}" class="template_width"/>
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect active">
+                                                        <input class="form-check-input" type="radio" name="template" id="template3" value="template3"> <img src="{{asset('images/searchmez/template3.png')}}" class="template_width"/>
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect active">
+                                                        <input class="form-check-input" type="radio" name="template" id="template4" value="template4"> <img src="{{asset('images/searchmez/template4.png')}}" class="template_width"/>
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect active">
+                                                        <input class="form-check-input" type="radio" name="template" id="template5" value="template5"> <img src="{{asset('images/searchmez/template5.png')}}" class="template_width"/>
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect active">
+                                                        <input class="form-check-input" type="radio" name="template" id="template6" value="template6"> <img src="{{asset('images/searchmez/template6.png')}}" class="template_width"/>
+                                                    </label>
+                                                    <label class="btn btn-outline-primary waves-effect active">
+                                                        <input class="form-check-input" type="radio" name="template" id="template7" value="template7"> <img src="{{asset('images/searchmez/template7.png')}}" class="template_width"/>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="price_per_adult">Price per one-off - Adult (P) <span class="text-red">(*)</span> </label>
+                                                    <input type="number" name="price_per_adult" id="price_per_adult" class="form-control" placeholder="Price per one-off - Adult (P)" required />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="price_per_child">Price per one-off - Child (P) <span class="text-red">(*)</span> </label>
+                                                    <input type="number" name="price_per_child" id="price_per_child" class="form-control" placeholder="Price per one-off - Child (P)" required />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-control-warning custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="Couples" name="booking_checkbox[]" value="Couples">
+                                                    <label class="custom-control-label" for="Couples">Couples</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-control-warning custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="Students" name="booking_checkbox[]" value="Students">
+                                                    <label class="custom-control-label" for="Students">Students</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="custom-control custom-control-warning custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="Pets" name="booking_checkbox[]" value="Pets">
+                                                    <label class="custom-control-label" for="Pets">Pets</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="category" >Category <span class="text-red">(*)</span></label>
+                                                    <select class="form-control" id="category" name="category" required>
+                                                        <option value="">Please choose ...</option>
+                                                        <option value="1">Amphibians</option>
+                                                        <option value="2">Birds</option>
+                                                        <option value="7">Fish</option>
+                                                        <option value="1257">Invertebrates</option>
+                                                        <option value="1258">Others</option>
+                                                        <option value="1256">Reptiles</option>
+                                                        <option value="1266">Tiger</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="googlemap">Googlemap Location <span class="text-red">(*)</span> </label>
+                                                    <input type="text" name="googlemap" id="googlemap" class="form-control" placeholder="Googlemap Location" required />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="location">Location <span class="text-red">(*)</span> </label>
+                                                    <input type="text" name="location" id="location" class="form-control" placeholder="Location" required />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="age">Maximum number of people <span class="text-red">(*)</span> </label>
+                                                    <input type="number" name="maximum_number" id="maximum_number" class="form-control" placeholder="maximum_number" required />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="notable_amenities">Notable amenities <span class="text-red">(*)</span> </label>
+                                                    <input type="text" name="notable_amenities" id="notable_amenities" class="form-control" placeholder=">Notable amenities" required />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="title">Title <span class="text-red">(*)</span> </label>
+                                                    <input type="text" name="title" id="title" class="form-control" placeholder="Title" required />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="special_traits">Special traits <span class="text-red">(*)</span> </label>
+                                                    <input type="text" name="special_traits" id="special_traits" class="form-control" placeholder="Special traits" required />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="Description">Description <span class="text-red">(*)</span> </label>
+                                                    <textarea class="form-control" id="description" name="description" placeholder="Input here..." rows="3" required></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="custom-control custom-control-warning custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="question" name="checkbox[]" value="question">
+                                                    <label class="custom-control-label" for="question">Enable Ask a Question</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="custom-control custom-control-warning custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="Discount" name="checkbox[]" value="Discount">
+                                                    <label class="custom-control-label" for="Discount">Discount</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="custom-control custom-control-warning custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="Show_location" name="checkbox[]" value="Show_location">
+                                                    <label class="custom-control-label" for="Show_location">Show location</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="custom-control custom-control-warning custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="Redirect" name="checkbox[]" value="Redirect">
+                                                    <label class="custom-control-label" for="Redirect">Redirect</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="custom-control custom-control-warning custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="Feature" name="checkbox[]" value="Feature">
+                                                    <label class="custom-control-label" for="Feature">Feature</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="include_question">Include Question <span class="text-red">(*)</span> </label>
+                                                    <input type="text" name="include_question" id="include_question" class="form-control" placeholder="Include Question" required />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="feature_image">Upload Thumnail <span class="text-red">(*)</span></label>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" name="feature_image" id="feature_image" required />
+                                                        <label class="custom-file-label" for="feature_image">Choose profile pic</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="feature_image">Upload File or Video</label>
+                                                    <div class="custom-file file_video">
+                                                        <input type="file" class="custom-file-input" id="file_video" name="file_video[]" multiple />
+                                                        <label class="custom-file-label" for="file_video">Choose file</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="feature_image">Upload more reference</label>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="image" name="image[]" multiple />
+                                                        <label class="custom-file-label" for="image">Choose profile pic</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="validationCheckBootstrap" />
+                                                        <label class="custom-control-label" for="validationCheckBootstrap"
+                                                        >Agree to our terms and conditions</label
+                                                        >
+                                                        <div class="invalid-feedback">You must agree before submitting.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="listing" value="<?php echo $listing; ?>">
+                        <input type="submit" class="btn btn-primary" value="Post">
+                        {{--                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Post</button>--}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+@endsection
 
 @section('vendor-script')
     {{-- vendor files --}}
-    <script src="{{ asset(mix('vendors/js/tables/datatable/jquery.dataTables.min.js')) }}"></script>
-    <script src="{{ asset(mix('vendors/js/tables/datatable/datatables.bootstrap4.min.js')) }}"></script>
-    <script src="{{ asset(mix('vendors/js/tables/datatable/dataTables.responsive.min.js')) }}"></script>
     <script src="{{ asset(mix('vendors/js/tables/datatable/responsive.bootstrap4.js')) }}"></script>
-    <script src="{{ asset(mix('vendors/js/pickers/flatpickr/flatpickr.min.js')) }}"></script>
 @endsection
 
-@section('page-script')
-    {{-- Page js files --}}
-    <script src="{{ asset(mix('js/scripts/tables/table-datatables-advanced.js')) }}"></script>
-@endsection

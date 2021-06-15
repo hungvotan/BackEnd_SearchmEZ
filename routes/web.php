@@ -53,6 +53,8 @@ Route::group(['prefix' => 'listing'], function () {
     Route::get('realestate', [ListingController::class,'realestate'])->name('listing-realestate');
     Route::get('services', [ListingController::class,'services'])->name('listing-services');
     Route::get('webdirectory', [ListingController::class,'webdirectory'])->name('listing-webdirectory');
+
+    Route::post('addnew', [ListingController::class,'addnew'])->name('listing-addnew');
 });
 
 

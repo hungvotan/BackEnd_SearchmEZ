@@ -18,7 +18,7 @@
   <!-- BEGIN: Content-->
   <div class="app-content content {{ $configData['pageClass'] }}">
     <div class="content-overlay"></div>
-    <div class="header-navbar-shadow"></div>
+{{--    <div class="header-navbar-shadow"></div>--}}
     @if(($configData['contentLayout']!=='default') && isset($configData['contentLayout']))
     <div class="content-area-wrapper {{ $configData['layoutWidth'] === 'boxed' ? 'container p-0' : '' }}">
       <div class="{{ $configData['sidebarPositionClass'] }}">

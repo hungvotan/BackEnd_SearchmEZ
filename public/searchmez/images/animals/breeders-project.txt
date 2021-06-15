@@ -1,0 +1,135 @@
+➡️Google maps must be embedded so that customers can find breeders closest to them
+
+
+➡️A function where breeders/kennels/sellers and buyers can search by breed, kennel name, or location.
+
+
+➡️Rating feature and current rating (1-5 stars) should be present on buyer and seller profiles
+➡️All users must have the option to turn on post notifications (privately) for breeders/kennels
+➡️A "report" feature must be present on every post, page, and in every private message. Additional details must be provided by the person reporting the post, page, or private message.
+➡️EVERY REGISTERED USER should have a "LOGOUT" function, which is visible at the top right corner of their screen at ALL times.
+➡️Our logo must be visible at all times, and clicking the logo should redirect the user back to the homepage.
+
+
+
+Main page
+    
+    ⁃    Tabs include⬇️
+(About us, join now, login, gallery, contact us)
+
+
+➡️"Contact us" info will include the official Breeders Connect
+Email:
+Instagram:
+Twitter:
+Facebook:
+
+Once customers select "join now" they will be prompted to enter the following fields:
+
+➡️Full Name
+➡️Username (one per person, no duplicates)
+
+
+➡️Password
+➡️Full address ( only visible to seller and owner of website)
+
+
+➡️Birthday (must be 18yrs or older)
+
+
+➡️Phone number
+➡️Email
+➡️A check box to accept terms and conditions.
+
+
+➡️There shall be a "join now" button at the bottom that they must click to create their account after filling out the required fields.
+
+➡️Once the customer fills out all required fields and checks the "i agree to the terms and conditions" box, they shall be prompted to choose if they’re looking to purchase or sell.
+
+(If they choose to sell)
+ 
+➡️Then it directs customer to the sellers' side of the website.
+
+➡️User will be directed to a page where they select that they are a "breeder/kennel"(Monthly sellers ) or if they are only doing a single sale/re-homing(1 time payment or commsions base on sale)
+➡️If they select that they are a breeder/kennel, they must choose a membership - note that this is a recurring charge, but memberships can be canceled at anytime.
+(Membership keeps the breeder/kennel page active for advertising/selling until membership runs out)
+
+
+➡️The cardholder will be charged immediately
+
+
+➡️Monthly Membership (First month Free): $40
+3 month pre-pay membership(First month free): $70
+
+
+➡️All memberships are recurring fees and can be cancelled at any time!
+
+➡️Once seller has chosen their membership package, they will be promoted to pay using:
+Debit/credit
+PayPal
+Venmo
+➡️ As i said above there will be 1 month or 7 days(havent decided yet ) free of charge (FREE TRIAL) to try out the service. It is ideal to not charge them on this period ,they will  submit card,paypal or whatever payments sytem details but wont get charged until the  free trial is over .
+ 
+
+➡️After that they will be redirected to the  fully customizable page:
+
+Seller will then have to enter information on their page for buyers to view.
+
+➡️Profile Picture (function to remove, change, or upload)
+➡️Function to remove and upload post(s) of their kennel
+➡️Banner (optional)
+➡️ Public info regarding the breeder/kennel:
+➡️Kennel Name
+➡️phone number (optional)
+➡️Type(s) of animal(s) and breed(s)
+➡️Kennel location (city and state only) will be used for the google maps feature
+➡️They shall have the option to publicize that they offer stud services
+➡️Option to set date(s) for upcoming litter(s)
+➡️Option to tag their social media accounts (instagram, twitter, facebook, youtube) on
+their page and the form(s) of payment they accept
+
+The site shall additionally
+➡️Give breeders/kennels the option to list prices & host their own bids for litter picks. They should also have the option to set the starting price for their bid(s)
+➡️Give breeders/kennels the ability to accept and send messages to and from other users
+➡️Install the functionality where pictures and profiles/kennels can receive likes from anyone on the site
+
+If user chose the option for a single sale/rehoming:
+
+➡️They must have a function that allows them to post the animal they are selling/re-homing, and there must be a "details" box with fields  they can manually fill in such as
+Breed (mandatory to write something, even if it's "unknown"):
+Age (mandatory to write something, even if it's "unknown"):
+Any additional details (optional): (If they don't enter anything for this "optional" field, the field wont show on the post)
+➡️They must have the function to remove, edit, or upload
+➡️Post profile picture (Optional)
+➡️Shall be able to accept and send messages to and from other users
+➡️List price for their single-sale/re-homing
+➡️List location (state and city)
+➡️There should be a message with a box that MUST be checked, stating that the customer understands there will be a service charge when a sale is initiated (Service charge is 7% commission of the sale price once the animal is sold). Payments must be made through the website for single sale/re-homing. They shall be unable to continue until they check this box, which clarifies that they've read and understand.
+
+
+If the user chose a buyer account:
+User should have the following features:
+➡️Post/remove a profile picture (optional)
+➡️A filter option to search by breed, gender, age, price, location, and type of animal.
+➡️Have the ability to send and accept messages to and from breeders/kennels/sellers.
+➡️Buyer should have the option to filter the random posts that initially appear on their buyer's screen. For example, when they go to buy an animal, if they only wish to see LOCAL random posts, they can adjust the filter to "local", "nationwide", or they can enter the city/state in which they'd like to view random posts from.
+
+
+
+IMPORTANT note ==> Ive examined the theme provided https://pets.lisfinity.com/ and it fits with most of the functionalites made here .However there has to be adjustments like 
+for example 
+➡️ the home theme needs to be fit  for dogs only ,the search bar by country .The dogs listed above in a  moving slideshow .When clicked  they should be redirected to the corresponding page only for registered buyers and for new memebrs redirected to the sign up page.
+➡️ The dashboard needs to be adjusted to fit monthly members as well as 1 time sellers .
+
+So all in all i need you to be open to adjustments on the theme and small revisions.I dont want to have arguments or discussions after we agree to work together on this .
+
+➡️ Finally i want the work to be done live on the domain and hosting ive bought . i have also bough the theme ,i can send it to you if you want to check it first hand an make sure you will be able to do this.
+
+
+
+
+
+
+
+
+
