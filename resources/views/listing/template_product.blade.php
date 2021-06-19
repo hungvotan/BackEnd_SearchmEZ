@@ -1,7 +1,7 @@
 <?php
 $images = Helper::listing_get_feature_image($value->id);
 if(isset($images)) {
-    $image_url = '/searchmez/images/'.$value->listing.'/'.$images->url;
+    $image_url = '/searchmez/images/'.$value->listing.'/'.$images->name;
 } else {
     $image_url = '';
 }

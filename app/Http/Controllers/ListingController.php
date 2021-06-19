@@ -325,7 +325,7 @@ class ListingController extends Controller
                         DB::table('product_image')->insertGetId([
                             'product_id' => $products_id,
                             'type' => 'feature_image',
-                            'url'  => $profileImage
+                            'name'  => $profileImage
                         ]);
                     } catch(Exception $e){
                         return redirect()->back()->with('error','Errors.');
@@ -344,7 +344,7 @@ class ListingController extends Controller
                                 DB::table('product_image')->insertGetId([
                                     'product_id' => $products_id,
                                     'type' => 'file_video',
-                                    'url'  => $profileImage
+                                    'name'  => $profileImage
                                 ]);
                             } catch(Exception $e){
                                 return redirect()->back()->with('error','Errors.');
@@ -364,7 +364,7 @@ class ListingController extends Controller
                                 DB::table('product_image')->insertGetId([
                                     'product_id' => $products_id,
                                     'type' => 'image',
-                                    'url'  => $profileImage
+                                    'name'  => $profileImage
                                 ]);
                             } catch(Exception $e){
                                 return redirect()->back()->with('error','Errors.');
