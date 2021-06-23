@@ -77,7 +77,7 @@ class RegisterController extends Controller
         $pageConfigs = ['blankPage' => true];
 
         return view('/auth/register', [
-        'pageConfigs' => $pageConfigs
+            'pageConfigs' => $pageConfigs
         ]);
     }
 }

@@ -59,7 +59,7 @@
                 </div>
             <?php } else { ?>
                 <?php foreach ($get_listing AS $value) { ?>
-                    @include('listing.template_product');
+                    @include('listing.template_product')
                 <?php } ?>
             <?php } ?>
         </div>

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -10,7 +9,10 @@ use Illuminate\Support\Facades\Validator;
 
 class ListingController extends Controller
 {
-
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
   public function Animals()
   {
     $breadcrumbs = [
@@ -78,17 +80,6 @@ class ListingController extends Controller
         $data['listing'] = 'coupon';
         return view('/listing/listing-coupon', $data);
     }
-    public function Edibles()
-    {
-        $breadcrumbs = [
-            ['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Listing"], ['name' => "Edibles"]
-        ];
-        $get_listing = $this->get_listing('edibles');
-        $data['breadcrumbs'] = $breadcrumbs;
-        $data['get_listing'] = $get_listing;
-        $data['listing'] = 'edibles';
-        return view('/listing/listing-edibles', $data);
-    }
     public function Events()
     {
         $breadcrumbs = [
@@ -122,6 +113,28 @@ class ListingController extends Controller
         $data['listing'] = 'jobs';
         return view('/listing/listing-jobs', $data);
     }
+    public function Meetups()
+    {
+        $breadcrumbs = [
+            ['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Listing"], ['name' => "Meetups"]
+        ];
+        $get_listing = $this->get_listing('meetups');
+        $data['breadcrumbs'] = $breadcrumbs;
+        $data['get_listing'] = $get_listing;
+        $data['listing'] = 'meetups';
+        return view('/listing/listing-meetups', $data);
+    }
+    public function People()
+    {
+        $breadcrumbs = [
+            ['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Listing"], ['name' => "People"]
+        ];
+        $get_listing = $this->get_listing('people');
+        $data['breadcrumbs'] = $breadcrumbs;
+        $data['get_listing'] = $get_listing;
+        $data['listing'] = 'people';
+        return view('/listing/listing-people', $data);
+    }
     public function Places()
     {
         $breadcrumbs = [
@@ -133,17 +146,7 @@ class ListingController extends Controller
         $data['listing'] = 'jobs';
         return view('/listing/listing-places', $data);
     }
-    public function Products()
-    {
-        $breadcrumbs = [
-            ['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Listing"], ['name' => "Products"]
-        ];
-        $data['listing'] = 'products';
-        $get_listing = $this->get_listing($data['listing']);
-        $data['breadcrumbs'] = $breadcrumbs;
-        $data['get_listing'] = $get_listing;
-        return view('/listing/listing-products', $data);
-    }
+
     public function Realestate()
     {
         $breadcrumbs = [
@@ -166,6 +169,18 @@ class ListingController extends Controller
         $data['get_listing'] = $get_listing;
         return view('/listing/listing-services', $data);
     }
+    public function Stores()
+    {
+        $breadcrumbs = [
+            ['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Listing"], ['name' => "Stores"]
+        ];
+        $data['listing'] = 'stores';
+        $get_listing = $this->get_listing($data['listing']);
+        $data['breadcrumbs'] = $breadcrumbs;
+        $data['get_listing'] = $get_listing;
+        return view('/listing/listing-stores', $data);
+    }
+
     public function Webdirectory()
     {
         $breadcrumbs = [
@@ -177,6 +192,29 @@ class ListingController extends Controller
         $data['get_listing'] = $get_listing;
         return view('/listing/listing-webdirectory', $data);
     }
+    public function Apparels()
+    {
+        $breadcrumbs = [
+            ['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Listing"], ['name' => "Apparels"]
+        ];
+        $get_listing = $this->get_listing('apparels');
+        $data['breadcrumbs'] = $breadcrumbs;
+        $data['get_listing'] = $get_listing;
+        $data['listing'] = 'apparels';
+        return view('/listing/listing-apparels', $data);
+    }
+    public function Edibles()
+    {
+        $breadcrumbs = [
+            ['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Listing"], ['name' => "Edibles"]
+        ];
+        $get_listing = $this->get_listing('edibles');
+        $data['breadcrumbs'] = $breadcrumbs;
+        $data['get_listing'] = $get_listing;
+        $data['listing'] = 'edibles';
+        return view('/listing/listing-edibles', $data);
+    }
+
 
     public function addnew(Request $request)
     {
@@ -392,7 +430,7 @@ class ListingController extends Controller
         if($get_user->admin == 0) {
             $get_listing = DB::table('product')
                 ->select('*')
-                ->where('userId ',$user_id)
+                ->where('userId',$user_id)
                 ->where('listing',$listing)
                 ->orderBy('id', 'desc')
                 ->get();

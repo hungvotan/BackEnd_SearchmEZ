@@ -23,7 +23,7 @@ $(function () {
     gridViewBtn = $('.grid-view-btn'),
     listViewBtn = $('.list-view-btn'),
     priceSlider = document.getElementById('price-slider'),
-    ecommerceProducts = $('#ecommerce-products'),
+    ecommerceProducts = $('#ecommerce-stores'),
     sortingDropdown = $('.dropdown-sort .dropdown-item'),
     sortingText = $('.dropdown-toggle .active-sorting'),
     wishlist = $('.btn-wishlist'),

@@ -1,7 +1,7 @@
 
 @extends('layouts/contentLayoutMaster')
 
-@section('title', 'Products | Listing')
+@section('title', 'Stores | Listing')
 
 @section('vendor-style')
     {{-- vendor css files --}}
@@ -39,7 +39,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Products | Listing</h4>
+                        <h4 class="card-title">Stores | Listing</h4>
                         <button class="dt-button btn btn-primary btn-add-record ml-2" data-toggle="modal" data-target="#addnew" type="button"><span>Add New</span></button>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
             </div>
             <?php } else { ?>
             <?php foreach ($get_listing AS $value) { ?>
-            @include('listing.template_product');
+            @include('listing.template_product')
             <?php } ?>
             <?php } ?>
         </div>

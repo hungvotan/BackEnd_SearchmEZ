@@ -28,10 +28,11 @@ use App\Http\Controllers\ChartsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 // Main Page Route
 // Route::get('/', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce')->middleware('verified');
- Route::get('/', [AdminFeedController::class,'adminfeed'])->name('adminfeed')->middleware('verified');
+Route::get('/', [AdminFeedController::class,'adminfeed'])->name('adminfeed')->middleware('verified');
+// Route::get('/', [AdminFeedController::class,'adminfeed'])->name('adminfeed');
+ Route::get('/logout', [AdminFeedController::class,'logout'])->name('logout');
 //Route::get('/', [DashboardController::class,'dashboardEcommerce'])->name('dashboard-ecommerce');
 
 Auth::routes(['verify' => true]);
@@ -44,15 +45,18 @@ Route::group(['prefix' => 'listing'], function () {
     Route::get('blogs', [ListingController::class,'blogs'])->name('listing-blogs');
     Route::get('booking', [ListingController::class,'booking'])->name('listing-booking');
     Route::get('coupon', [ListingController::class,'coupon'])->name('listing-coupon');
-    Route::get('edibles', [ListingController::class,'edibles'])->name('listing-edibles');
     Route::get('events', [ListingController::class,'events'])->name('listing-events');
     Route::get('generallisting', [ListingController::class,'generallisting'])->name('listing-generallisting');
     Route::get('jobs', [ListingController::class,'jobs'])->name('listing-jobs');
+    Route::get('meetups', [ListingController::class,'meetups'])->name('listing-meetups');
+    Route::get('people', [ListingController::class,'people'])->name('listing-people');
     Route::get('places', [ListingController::class,'places'])->name('listing-places');
-    Route::get('products', [ListingController::class,'products'])->name('listing-products');
     Route::get('realestate', [ListingController::class,'realestate'])->name('listing-realestate');
     Route::get('services', [ListingController::class,'services'])->name('listing-services');
+    Route::get('stores', [ListingController::class,'stores'])->name('listing-stores');
     Route::get('webdirectory', [ListingController::class,'webdirectory'])->name('listing-webdirectory');
+    Route::get('apparels', [ListingController::class,'apparels'])->name('listing-apparels');
+    Route::get('edibles', [ListingController::class,'edibles'])->name('listing-edibles');
 
     Route::post('addnew', [ListingController::class,'addnew'])->name('listing-addnew');
 });
