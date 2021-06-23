@@ -40,11 +40,10 @@ html .content.app-content {
     background: #404040;
 }
 .main-menu.menu-light .navigation > li ul .active {
-    background: linear-gradient(
-            118deg
-            , #ff7900, rgb(240 160 103 / 70%));
-    box-shadow: 0 0 10px 1px rgb(175 157 130 / 70%);
+    background: #ff7900;
+    box-shadow: none;
 }
+
 .main-menu.menu-light .navigation li a {color: #FFF;}
 .main-menu .shadow-bottom {display: none !important;}
 .customizer {display: none !important;}

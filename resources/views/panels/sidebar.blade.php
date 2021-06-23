@@ -47,7 +47,6 @@ $configData = Helper::applClasses();
   <div class="main-menu-content">
     <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
       {{-- Foreach menu item starts --}}
-
       @if(isset($menuData[0]))
       @foreach($menuData[0]->menu as $menu)
 

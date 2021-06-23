@@ -6,8 +6,8 @@ if(isset($images)) {
     $image_url = '';
 }
 ?>
-<div class="col-md-6 col-xl-4">
-    <div class="card mb-3">
+<div class="col-md-6 col-xl-3">
+    <div class="card mb-4">
         <img class="card-img-top" src="<?php echo $image_url; ?>" alt="SearchmeZ">
         <div class="card-body">
             <h4 class="card-title"><?php echo $value->title; ?></h4>

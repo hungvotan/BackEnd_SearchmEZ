@@ -290,7 +290,7 @@
             <a class="dropdown-item" href="{{url('page/faq')}}">
               <i class="mr-50" data-feather="help-circle"></i> FAQ
             </a>
-            <a class="dropdown-item" href="{{url('auth/login-v2')}}">
+            <a class="dropdown-item" href="{{url('logout')}}">
               <i class="mr-50" data-feather="power"></i> Logout
             </a>
           </div>

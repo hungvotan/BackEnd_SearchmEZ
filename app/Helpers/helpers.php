@@ -161,7 +161,6 @@ class Helper
             }
         }
     }
-
     public static function listing_get_feature_image($product_id)
     {
         $feature_image = DB::table('product_image')

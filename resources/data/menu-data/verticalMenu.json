@@ -60,91 +60,127 @@
           "url": "listing/animals",
           "name": "Animals",
           "icon": "home",
-          "slug": "listing-animals"
+          "slug": "listing-animals",
+          "image": "animals.png"
         },
         {
           "url": "listing/auction",
           "name": "Auction",
           "icon": "home",
-          "slug": "listing-auction"
+          "slug": "listing-auction",
+          "image": "auction.png"
         },
         {
           "url": "listing/automobiles",
           "name": "Automobiles",
           "icon": "home",
-          "slug": "listing-automobiles"
+          "slug": "listing-automobiles",
+          "image": "automobiles.png"
         },
         {
           "url": "listing/blogs",
           "name": "Blogs",
           "icon": "home",
-          "slug": "listing-blogs"
+          "slug": "listing-blogs",
+          "image": "blogs.png"
         },
         {
           "url": "listing/booking",
           "name": "Booking",
           "icon": "home",
-          "slug": "listing-booking"
+          "slug": "listing-booking",
+          "image": "booking.png"
         },
         {
           "url": "listing/coupon",
           "name": "Coupon",
           "icon": "home",
-          "slug": "listing-coupon"
-        },
-        {
-          "url": "listing/edibles",
-          "name": "Edibles",
-          "icon": "home",
-          "slug": "listing-edibles"
+          "slug": "listing-coupon",
+          "image": "coupon.png"
         },
         {
           "url": "listing/events",
           "name": "Events",
           "icon": "home",
-          "slug": "listing-events"
+          "slug": "listing-events",
+          "image": "events.png"
         },
         {
           "url": "listing/generallisting",
           "name": "General Listing",
           "icon": "home",
-          "slug": "listing-generallisting"
+          "slug": "listing-generallisting",
+          "image": "generallisting.png"
         },
         {
           "url": "listing/jobs",
           "name": "Jobs",
           "icon": "home",
-          "slug": "listing-jobs"
+          "slug": "listing-jobs",
+          "image": "jobs.png"
+        },
+        {
+          "url": "listing/meetups",
+          "name": "Meetups",
+          "icon": "home",
+          "slug": "listing-meetups",
+          "image": "meetups.png"
+        },
+        {
+          "url": "listing/people",
+          "name": "People",
+          "icon": "home",
+          "slug": "listing-people",
+          "image": "people.png"
         },
         {
           "url": "listing/places",
           "name": "Places",
           "icon": "home",
-          "slug": "listing-places"
-        },
-        {
-          "url": "listing/products",
-          "name": "Products",
-          "icon": "home",
-          "slug": "listing-products"
+          "slug": "listing-places",
+          "image": "places.png"
         },
         {
           "url": "listing/realestate",
           "name": "Real Estate",
           "icon": "home",
-          "slug": "listing-realestate"
+          "slug": "listing-realestate",
+          "image": "realestate.png"
         },
         {
           "url": "listing/services",
-          "name": "Services",
+          "name": "Service Shop",
           "icon": "home",
-          "slug": "listing-services"
+          "slug": "listing-services",
+          "image": "services.png"
+        },
+        {
+          "url": "listing/stores",
+          "name": "Stores",
+          "icon": "home",
+          "slug": "listing-stores",
+          "image": "stores.png"
         },
         {
           "url": "listing/webdirectory",
           "name": "Web Directory",
           "icon": "home",
-          "slug": "listing-webdirectory"
+          "slug": "listing-webdirectory",
+          "image": "webdirectory.png"
+        },
+        {
+          "url": "listing/apparels",
+          "name": "Apparels",
+          "icon": "home",
+          "slug": "listing-apparels",
+          "image": "apparels.png"
+        },
+        {
+          "url": "listing/edibles",
+          "name": "Edibles",
+          "icon": "home",
+          "slug": "listing-edibles",
+          "image": "edibles.png"
         }
       ]
     },
