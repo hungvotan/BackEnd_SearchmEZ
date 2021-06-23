@@ -22,8 +22,8 @@ return [
     | Cache Stores
     |--------------------------------------------------------------------------
     |
-    | Here you may define all of the cache "stores" for your application as
-    | well as their drivers. You may even define multiple stores for the
+    | Here you may define all of the cache "products" for your application as
+    | well as their drivers. You may even define multiple products for the
     | same cache driver to group types of items stored in your caches.
     |
     | Supported drivers: "apc", "array", "database", "file",
@@ -31,7 +31,7 @@ return [
     |
     */
 
-    'stores' => [
+    'products' => [
 
         'apc' => [
             'driver' => 'apc',

@@ -64,6 +64,13 @@
           "image": "animals.png"
         },
         {
+          "url": "listing/apparels",
+          "name": "Apparels",
+          "icon": "home",
+          "slug": "listing-apparels",
+          "image": "apparels.png"
+        },
+        {
           "url": "listing/auction",
           "name": "Auction",
           "icon": "home",
@@ -97,6 +104,13 @@
           "icon": "home",
           "slug": "listing-coupon",
           "image": "coupon.png"
+        },
+        {
+          "url": "listing/edibles",
+          "name": "Edibles",
+          "icon": "home",
+          "slug": "listing-edibles",
+          "image": "edibles.png"
         },
         {
           "url": "listing/events",
@@ -149,17 +163,17 @@
         },
         {
           "url": "listing/services",
-          "name": "Service Shop",
+          "name": "Services",
           "icon": "home",
           "slug": "listing-services",
           "image": "services.png"
         },
         {
-          "url": "listing/stores",
-          "name": "Stores",
+          "url": "listing/products",
+          "name": "Products",
           "icon": "home",
-          "slug": "listing-stores",
-          "image": "stores.png"
+          "slug": "listing-products",
+          "image": "products.png"
         },
         {
           "url": "listing/webdirectory",
@@ -167,20 +181,6 @@
           "icon": "home",
           "slug": "listing-webdirectory",
           "image": "webdirectory.png"
-        },
-        {
-          "url": "listing/apparels",
-          "name": "Apparels",
-          "icon": "home",
-          "slug": "listing-apparels",
-          "image": "apparels.png"
-        },
-        {
-          "url": "listing/edibles",
-          "name": "Edibles",
-          "icon": "home",
-          "slug": "listing-edibles",
-          "image": "edibles.png"
         }
       ]
     },

@@ -234,26 +234,10 @@
                                                     <label class="form-label" for="color">Color <span class="text-red">(*)</span> </label>
                                                     <select class="form-control" id="color" name="color" required>
                                                         <option value="">Please choose...</option>
-                                                        <option value="Yellow">Yellow</option>
-                                                        <option value="White">White</option>
-                                                        <option value="Transparent">Transparent</option>
-                                                        <option value="Slate">Slate</option>
-                                                        <option value="Red">Red</option>
-                                                        <option value="Rainbow">Rainbow</option>
-                                                        <option value="Purple">Purple</option>
-                                                        <option value="Pink">Pink</option>
-                                                        <option value="Others">Others</option>
-                                                        <option value="Orange">Orange</option>
-                                                        <option value="Maroon">Maroon</option>
-                                                        <option value="Khaki">Khaki</option>
-                                                        <option value="Grey">Grey</option>
-                                                        <option value="Green">Green</option>
-                                                        <option value="Gold">Gold</option>
-                                                        <option value="Cyan">Cyan</option>
-                                                        <option value="Cream">Cream</option>
-                                                        <option value="Brown">Brown</option>
-                                                        <option value="Blue">Blue</option>
-                                                        <option value="Black">Black</option>
+                                                        <?php $color = Helper::get_listing_color();
+                                                        foreach ($color AS $value) {
+                                                            echo '<option value="'.$value.'">'.$value.'</option>';
+                                                        }?>
                                                     </select>
                                                 </div>
                                             </div>

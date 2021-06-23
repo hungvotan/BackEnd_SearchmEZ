@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-
+use League\Flysystem\Config;
 class ListingController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -21,7 +22,7 @@ class ListingController extends Controller
     $get_listing = $this->get_listing('animals');
     $data['breadcrumbs'] = $breadcrumbs;
     $data['get_listing'] = $get_listing;
-      $data['listing'] = 'animals';
+    $data['listing'] = 'animals';
     return view('/listing/listing-animals', $data);
   }
 
@@ -169,16 +170,16 @@ class ListingController extends Controller
         $data['get_listing'] = $get_listing;
         return view('/listing/listing-services', $data);
     }
-    public function Stores()
+    public function Products()
     {
         $breadcrumbs = [
-            ['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Listing"], ['name' => "Stores"]
+            ['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Listing"], ['name' => "Products"]
         ];
-        $data['listing'] = 'stores';
+        $data['listing'] = 'products';
         $get_listing = $this->get_listing($data['listing']);
         $data['breadcrumbs'] = $breadcrumbs;
         $data['get_listing'] = $get_listing;
-        return view('/listing/listing-stores', $data);
+        return view('/listing/listing-products', $data);
     }
 
     public function Webdirectory()

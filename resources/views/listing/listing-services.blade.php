@@ -202,13 +202,10 @@
                                                     <label for="category" >Category <span class="text-red">(*)</span></label>
                                                     <select class="form-control" id="category" name="category" required>
                                                         <option value="">Please choose ...</option>
-                                                        <option value="1">Amphibians</option>
-                                                        <option value="2">Birds</option>
-                                                        <option value="7">Fish</option>
-                                                        <option value="1257">Invertebrates</option>
-                                                        <option value="1258">Others</option>
-                                                        <option value="1256">Reptiles</option>
-                                                        <option value="1266">Tiger</option>
+                                                        <?php $category = Helper::get_listing_category();
+                                                        foreach ($category AS $value) {
+                                                            echo '<option value="'.$value.'">'.$value.'</option>';
+                                                        }?>
                                                     </select>
                                                 </div>
                                             </div>

@@ -4996,11 +4996,11 @@
           collapsedSeries: [],
           // when user collapses a series, it goes into this array
           collapsedSeriesIndices: [],
-          // this stores the index of the collapsedSeries instead of whole object for quick access
+          // this products the index of the collapsedSeries instead of whole object for quick access
           ancillaryCollapsedSeries: [],
           // when user collapses an "alwaysVisible" series, it goes into this array
           ancillaryCollapsedSeriesIndices: [],
-          // this stores the index of the ancillaryCollapsedSeries whose y-axis is always visible
+          // this products the index of the ancillaryCollapsedSeries whose y-axis is always visible
           risingSeries: [],
           // when user re-opens a collapsed series, it goes here
           dataFormatXNumeric: false,

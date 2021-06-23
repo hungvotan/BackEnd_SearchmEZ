@@ -122,13 +122,10 @@
                                                 <label for="category" >Category <span class="text-red">(*)</span></label>
                                                 <select class="form-control" id="category" name="category" required>
                                                     <option value="">Select Category</option>
-                                                    <option value="1">Amphibians</option>
-                                                    <option value="2">Birds</option>
-                                                    <option value="7">Fish</option>
-                                                    <option value="1257">Invertebrates</option>
-                                                    <option value="1258">Others</option>
-                                                    <option value="1256">Reptiles</option>
-                                                    <option value="1266">Tiger</option>
+                                                    <?php $category = Helper::get_listing_category();
+                                                    foreach ($category AS $value) {
+                                                        echo '<option value="'.$value.'">'.$value.'</option>';
+                                                    }?>
                                                 </select>
                                             </div>
                                         </div>
@@ -143,26 +140,10 @@
                                                 <label class="form-label" for="age">Color <span class="text-red">(*)</span> </label>
                                                 <select class="form-control" id="color" name="color" required>
                                                     <option value="">Select Color</option>
-                                                    <option value="Yellow">Yellow</option>
-                                                    <option value="White">White</option>
-                                                    <option value="Transparent">Transparent</option>
-                                                    <option value="Slate">Slate</option>
-                                                    <option value="Red">Red</option>
-                                                    <option value="Rainbow">Rainbow</option>
-                                                    <option value="Purple">Purple</option>
-                                                    <option value="Pink">Pink</option>
-                                                    <option value="Others">Others</option>
-                                                    <option value="Orange">Orange</option>
-                                                    <option value="Maroon">Maroon</option>
-                                                    <option value="Khaki">Khaki</option>
-                                                    <option value="Grey">Grey</option>
-                                                    <option value="Green">Green</option>
-                                                    <option value="Gold">Gold</option>
-                                                    <option value="Cyan">Cyan</option>
-                                                    <option value="Cream">Cream</option>
-                                                    <option value="Brown">Brown</option>
-                                                    <option value="Blue">Blue</option>
-                                                    <option value="Black">Black</option>
+                                                    <?php $color = Helper::get_listing_color();
+                                                    foreach ($color AS $value) {
+                                                        echo '<option value="'.$value.'">'.$value.'</option>';
+                                                    }?>
                                                 </select>
                                             </div>
                                         </div>

@@ -170,4 +170,16 @@ class Helper
             ->first();
         return $feature_image;
     }
+    public static function get_listing_color()
+    {
+        return array(
+            'White','Silver','Gray','Black','Red','Black','Maroon','Yellow','Olive','Lime','Green','Aqua','Teal','Blue','Fuchsia','Purple'
+        );
+    }
+    public static function get_listing_category()
+    {
+        return array(
+            'Amphibians','Birds','Fish','Invertebrates','Reptiles','Tiger','Others'
+        );
+    }
 }
